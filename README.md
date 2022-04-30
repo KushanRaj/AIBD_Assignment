@@ -11,6 +11,8 @@ python3 setup.py build develop --user
 ```
 Please also ensure to download the required packages mentioned in the `requirements.txt` file.
 
+In the 2D case, we also provide a `test` model which is essentially the CUDA coded model written using pytorch to compare and evaluate our model.
+
 ## Training the model
 
 Run the train.py file in either folder to train the 2D/3D model. Provide the location of the downloaded data using `--data_root`. If the deata has not been downloaded, torch will download it on its own.
