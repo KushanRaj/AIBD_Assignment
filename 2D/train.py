@@ -12,6 +12,8 @@ import wandb
 import json
 
 class testModel(torch.nn.Module):
+    '''Torch Model to compare my CUDA model to torch algorithms
+    '''
 
     def __init__(self):
 
@@ -106,7 +108,7 @@ class Trainer:
             num_workers=args.n_workers,
         )
 
-        self.test_model = testModel().to(torch.device(self.device))
+        self.test_model = testModel().to(torch.device(self.device)) #Model to compare with
 
         self.model = network.Model(self.device, 1, n_cls, args.hid_dim, args.kernel_size)
 
